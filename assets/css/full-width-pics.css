@@ -1,0 +1,138 @@
+/*
+ * Start Bootstrap - Full Width Pics (http://startbootstrap.com/)
+ * Copyright 2013-2016 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+ */
+
+body {
+}
+
+.image-bg-fluid-height,
+.image-bg-fixed-height {
+    text-align: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.image-bg-fluid-height {
+	background: url('../imgs/main.png') no-repeat center center scroll;
+    background-size: 2000px auto;
+    padding: 100px 0;
+}
+
+.image-bg-fixed-height {
+	background: url('../imgs/main.png') no-repeat center center scroll;
+    height: 450px;
+}
+
+.img-center {
+	margin: 0 auto;
+}
+
+section {
+    padding: 75px 0;
+}
+
+.section-heading {
+    margin: 30px 0;
+    font-size: 4em;
+    font-family: 'Roboto', san-serif;
+}
+
+.section-lead {
+    margin: 30px 0;
+    font-family: 'Roboto', san-serif;
+}
+
+.section-paragraph {
+    margin: 30px 0;
+    font-family: 'Roboto', san-serif;
+}
+
+footer {
+    margin: 50px 0;
+    border-top: 1px solid #656565;
+}
+
+@media(max-width:768px) {
+    section {
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+
+    .section-heading {
+        font-size: 2em;
+    }
+}
+
+
+/*
+ * Personal CSS
+ */
+.profile-pic-div{
+    min-height: 250px;
+    max-height: 250px;
+    text-align: left;
+    margin-left: 100px;
+    opacity: 1;
+}
+
+,profile-pic{
+    border-radius: 50%;
+}
+
+.navbar-custom{
+    background: rgba(0,0,0,0.8);
+    border-color: rgba(0,0,0,0.8);
+}
+
+.navbar-custom .nav li a{
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+}
+
+.name{
+    font-family: 'Permanent Marker', cursive;
+    font-size: 80px;
+    font-weight: bolder;
+    line-height: 80px;
+    margin-left: 100px;
+    color: black;
+}
+
+.copyright{
+    margin-bottom: 0px;
+}
+
+.container{
+    line-height: 50px;
+}
+
+.row{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.row > [class*='col-'] {
+    display: flex;
+    flex-direction: column;
+}
+
+.fa,.ai{
+    color: #656565;
+}
+
+.fa:hover,.ai:hover{
+    cursor: pointer;
+    color: #2f75b5;
+}
+
+.contact-button{
+    background-color: #337ab7;
+    border-color: #337ab7;
+}
