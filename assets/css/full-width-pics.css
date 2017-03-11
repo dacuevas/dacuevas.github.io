@@ -17,13 +17,13 @@ body {
 }
 
 .image-bg-fluid-height {
-	background: url('../imgs/main.png') no-repeat center center scroll;
+	background: url('../imgs/main.png') repeat center center scroll;
     background-size: 2000px auto;
     padding-top: 100px;
 }
 
 .image-bg-fixed-height {
-	background: url('../imgs/main.png') no-repeat center center scroll;
+	background: url('../imgs/main.png') repeat center center scroll;
     height: 450px;
 }
 
