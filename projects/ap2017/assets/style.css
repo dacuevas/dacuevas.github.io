@@ -61,6 +61,15 @@
     font-weight: bold;
 }
 
+.noname {
+    background: #ffffff;
+}
+
 .table-striped-column > tbody > tr td:nth-of-type(odd) {
-  background-color: #f9f9f9;
+    background-color: #f9f9f9;
+}
+
+.hov:hover {
+    cursor: pointer;
+    background: #f0f0f0;
 }

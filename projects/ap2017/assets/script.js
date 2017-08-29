@@ -46,7 +46,7 @@ function fill_table_teams() {
                         cl = "vic";
                 }
                 html += "<tr>";
-                html += "<td class=\"" + cl + "\">" + team + "</td>";
+                html += "<td id=\"" + cl + "\" class=\"" + cl + "\">" + team + "</td>";
                 for (var i of table_data[team]) {
                     html += "<td>" + i + "</td>";
                 }
@@ -78,6 +78,23 @@ function fill_table_players() {
         html += "</tr>";
     }
     $("#table_players > tbody:last-child").append(html);
+}
+
+
+/*****************************************************************
+ * Bindings
+*****************************************************************/
+function highlight(who) {
+    $("#table_teams").find("td:not(." + who + ")").attr("class", "noname");
+    $("td[id=" + who + "]").attr("class", who);
+}
+
+function reset_highlight() {
+    var players = ["bryan", "daniel", "dorothy", "gabri",
+                   "martin", "meg", "paula", "vic"];
+    for (p of players) {
+        $("[id=" + p + "]").attr("class", p);
+    }
 }
 
 function sortTable(n, id) {
