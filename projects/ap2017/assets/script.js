@@ -68,7 +68,7 @@ function fill_table_players() {
                 html += "</tr>";
             }
             $("#table_players > tbody:last-child").append(html);
-        }});
+        });
 }
 
 function sortTable(n, id) {
