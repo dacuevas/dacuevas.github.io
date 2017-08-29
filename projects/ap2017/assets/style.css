@@ -1,0 +1,66 @@
+.player_square {
+    width: 15px;
+    height: 15px;
+    margin: 1px;
+    border: 1px solid rgba(0, 0, 0, .2);
+}
+
+.daniel {
+    /* green */
+    background: #59a14f;
+    background: rgba(89, 161, 79, 0.75);
+    font-weight: bold;
+}
+
+.gabri {
+    /* blue */
+    background: #4e79a7;
+    background: rgba(78, 121, 167, 0.75);
+    font-weight: bold;
+}
+
+.bryan {
+    /* red */
+    background: #e15759;
+    background: rgba(225, 87, 89, 0.75);
+    font-weight: bold;
+}
+
+.meg {
+    /* purple */
+    background: #b07aa1;
+    background: rgba(176, 122, 161, 0.75);
+    font-weight: bold;
+}
+
+.vic {
+    /* orange */
+    background: #f28e2b;
+    background: rgba(242, 142, 43, 0.75);
+    font-weight: bold;
+}
+
+.paula {
+    /* yellow */
+    background: #edc948;
+    background: rgba(237, 201, 72, 0.75);
+    font-weight: bold;
+}
+
+.dorothy {
+    /* pink */
+    background: #ff9da7;
+    background: rgba(255, 157, 167, 0.75);
+    font-weight: bold;
+}
+
+.martin {
+    /* grey */
+    background: #bab0ac;
+    /*background: rgba(, 0.75);*/
+    font-weight: bold;
+}
+
+.table-striped-column > tbody > tr td:nth-of-type(odd) {
+  background-color: #f9f9f9;
+  }
