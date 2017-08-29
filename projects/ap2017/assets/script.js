@@ -72,7 +72,7 @@ function fill_table_players() {
         html += "<tr>";
         for (var p of order_of_players) {
             var team = table_data[p][i];
-            html += "<td>" + team + "</td>";
+            html += "<td><a href=\"https:www.google.com/search?q=" + team + " score\" target=\"_blank\">" + team + "</a></td>";
             player_data[team] = p;
         }
         html += "</tr>";
