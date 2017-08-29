@@ -8,6 +8,7 @@ $(document).ready(function(){
 });
 
 function fill_table_teams() {
+    /*
     $.ajax("assets/read_team_table.php")
         .done(function(data) {
             data = JSON.parse(data);
@@ -48,12 +49,58 @@ function fill_table_teams() {
             }
             $("#table_teams > tbody:last-child").append(html);
         });
+        */
+    var table_data = {};
+    $.ajax("assets/team.tsv", {async:false})
+        .done(function(data) {
+            data = data.split("\n");
+            for (i = 1; i <= 32; ++i) {
+                ll = data[i].split("\t");
+                table_data[ll[0]] = ll.slice(1);
+            }
+        });
+            var html = "";
+            for (var team in table_data) {
+                var cl;
+                switch (player_data[team]) {
+                    case "Bryan":
+                        cl = "bryan";
+                        break;
+                    case "Daniel":
+                        cl = "daniel";
+                        break;
+                    case "Dorothy":
+                        cl = "dorothy";
+                        break;
+                    case "Gabri":
+                        cl = "gabri";
+                        break;
+                    case "Martin":
+                        cl = "martin";
+                        break;
+                    case "Meg":
+                        cl = "meg";
+                        break;
+                    case "Paula":
+                        cl = "paula";
+                        break;
+                    default:
+                        cl = "vic";
+                }
+                html += "<tr>";
+                html += "<td class=\"" + cl + "\">" + team + "</td>";
+                for (var i of table_data[team]) {
+                    html += "<td>" + i + "</td>";
+                }
+                html += "</tr>";
+            }
+            $("#table_teams > tbody:last-child").append(html);
 }
 
 function fill_table_players() {
+    /*
     $.ajax("assets/read_player_table.php", {async:false})
         .done(function(data) {
-            alert(data);
             data = JSON.parse(data);
             var order_of_players = ["Bryan", "Daniel", "Dorothy", "Gabri",
                                     "Martin", "Meg", "Paula", "Vic"];
@@ -69,6 +116,29 @@ function fill_table_players() {
             }
             $("#table_players > tbody:last-child").append(html);
         });
+        */
+    var table_data = {};
+    $.ajax('assets/player.tsv',{async:false})
+        .done(function(data) {
+            data = data.split("\n");
+            for (i = 1; i <= 8; ++i) {
+                ll = data[i].split("\t");
+                table_data[ll[0]] = ll.slice(1);
+            }
+        });
+    var order_of_players = ["Bryan", "Daniel", "Dorothy", "Gabri",
+                            "Martin", "Meg", "Paula", "Vic"];
+    var html = "";
+    for (i = 0; i < 4; ++i) {
+        html += "<tr>";
+        for (var p of order_of_players) {
+            var team = table_data[p][i];
+            html += "<td>" + team + "</td>";
+            player_data[team] = p;
+        }
+        html += "</tr>";
+    }
+    $("#table_players > tbody:last-child").append(html);
 }
 
 function sortTable(n, id) {
