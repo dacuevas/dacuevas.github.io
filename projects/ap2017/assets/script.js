@@ -51,7 +51,7 @@ function fill_table_teams() {
 }
 
 function fill_table_players() {
-    $.ajax("assets/read_player_table.php", {async:false})
+    $.ajax({url:"assets/read_player_table.php", async:false})
         .done(function(data) {
             data = JSON.parse(data);
             var order_of_players = ["Bryan", "Daniel", "Dorothy", "Gabri",
