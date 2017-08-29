@@ -51,8 +51,7 @@ function fill_table_teams() {
 }
 
 function fill_table_players() {
-    $.ajax({url:"assets/read_player_table.php", async:false})
-        .done(function(data) {
+    $.ajax({url:"assets/read_player_table.php", async:false, success:function(data) {
             data = JSON.parse(data);
             var order_of_players = ["Bryan", "Daniel", "Dorothy", "Gabri",
                                     "Martin", "Meg", "Paula", "Vic"];
@@ -67,7 +66,7 @@ function fill_table_players() {
                 html += "</tr>";
             }
             $("#table_players > tbody:last-child").append(html);
-        });
+        }});
 }
 
 function sortTable(n, id) {
