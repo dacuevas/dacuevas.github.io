@@ -8,7 +8,7 @@ $data = ["Bryan" => [],
          "Paula" => [],
          "Vic" => []];
 
-$handle = fopen("player.tsv", "r");
+$handle = fopen("projects/ap2017/assets/player.tsv", "r");
 $lnum = 0;
 while (($l = fgets($handle)) !== false) {
     ++$lnum;
