@@ -7,7 +7,14 @@ $(document).ready(function(){
         fill_table_players(pdata);
         $.ajax("assets/team.tsv").done(function(tdata){
             fill_table_teams(tdata);
-            $("#table_teams").tablesorter();
+            // Bind table sorting and
+            // preset sort for wins in descending order (column 4)
+            // then sort by division (column 3)
+            // then sort by ties (column 6)
+            $("#table_teams").tablesorter({sortList: [[3, 1],
+                                                      [2, 1],
+                                                      [5, 1]]
+            });
         });
     });
 });
