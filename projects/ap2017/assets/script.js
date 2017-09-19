@@ -30,6 +30,8 @@ function fill_table_teams(data) {
     player_wins["dorothy"] = 0;
     player_wins["paula"] = 0;
     player_wins["vic"] = 0;
+    var player_avg_elo = {"bryan": 0, "daniel": 0, "gabri": 0, "meg": 0,
+                          "martin": 0, "dorothy": 0, "paula": 0, "vic": 0};
     var table_data = {};
     data = data.split("\n");
     for (i = 1; i <= 32; ++i) {
@@ -72,6 +74,9 @@ function fill_table_teams(data) {
             if (col == 3) {
                 player_wins[cl] += Number(i);
             }
+            else if (col == 6) {
+                player_avg_elo[cl] += Number(i);
+            }
             html += "<td>" + i + "</td>";
         }
         html += "</tr>";
@@ -80,6 +85,7 @@ function fill_table_teams(data) {
 
     for (var i in player_wins) {
         $("#" + i + "_total").html(player_wins[i]);
+        $("#" + i + "_elo").html((player_avg_elo[i] / 4).toFixed(2));
     }
 }
 
