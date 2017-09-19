@@ -48,38 +48,41 @@
                 </table>
             </div>
             <div class="col-xs-2">
-                <table id="table_teams_legend" class="table">
+                <table id="table_teams_legend" class="table tablesorter">
                     <thead>
                         <tr>
-                            <th colspan="2">Legend</th>
+                            <th></th><th>Player</th><th>Wins</th>
                         </tr>
                     </thead>
+                    <tbody>
                     <tr>
-                        <td><div class="player_square bryan"></div></td><td class="hov" onclick="highlight('bryan')">Bryan</td>
-                    </tr>
-                    <tr>
-                        <td><div class="player_square daniel"></div></td><td class="hov" onclick="highlight('daniel')">Daniel</td>
+                        <td><div class="player_square bryan"></div></td><td class="hov" onclick="highlight('bryan')">Bryan</td><td id="bryan_total"></td>
                     </tr>
                     <tr>
-                        <td><div class="player_square dorothy"></div></td><td class="hov" onclick="highlight('dorothy')">Dorothy</td>
+                        <td><div class="player_square daniel"></div></td><td class="hov" onclick="highlight('daniel')">Daniel</td><td id="daniel_total"></td>
                     </tr>
                     <tr>
-                        <td><div class="player_square gabri"></div></td><td class="hov" onclick="highlight('gabri')">Gabri</td>
+                        <td><div class="player_square dorothy"></div></td><td class="hov" onclick="highlight('dorothy')">Dorothy</td><td id="dorothy_total"></td>
                     </tr>
                     <tr>
-                        <td><div class="player_square martin"></div></td><td class="hov" onclick="highlight('martin')">Martin</td>
+                        <td><div class="player_square gabri"></div></td><td class="hov" onclick="highlight('gabri')">Gabri</td><td id="gabri_total"></td>
                     </tr>
                     <tr>
-                        <td><div class="player_square meg"></div></td><td class="hov" onclick="highlight('meg')">Meg</td>
+                        <td><div class="player_square martin"></div></td><td class="hov" onclick="highlight('martin')">Martin</td><td id="martin_total"></td>
                     </tr>
                     <tr>
-                        <td><div class="player_square paula"></div></td><td class="hov" onclick="highlight('paula')">Paula</td>
+                        <td><div class="player_square meg"></div></td><td class="hov" onclick="highlight('meg')">Meg</td><td id="meg_total"></td>
                     </tr>
                     <tr>
-                        <td><div class="player_square vic"></div></td><td class="hov" onclick="highlight('vic')">Vic</td>
+                        <td><div class="player_square paula"></div></td><td class="hov" onclick="highlight('paula')">Paula</td><td id="paula_total"></td>
                     </tr>
-                        <tr><td></td><td class="hov" onclick="reset_highlight()">Reset</td>
+                    <tr>
+                        <td><div class="player_square vic"></div></td><td class="hov" onclick="highlight('vic')">Vic</td><td id="vic_total"></td>
                     </tr>
+                    </tbody>
+                    <footer>
+                    <tr><td></td><td class="hov" onclick="reset_highlight()">Reset</td><td></td></tr>
+                    </footer>
                 </table>
             </div>
         </div>

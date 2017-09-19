@@ -15,11 +15,21 @@ $(document).ready(function(){
                                                       [2, 1],
                                                       [5, 1]]
             });
+            $("#table_teams_legend").tablesorter({sortList: [[2, 1]]});
         });
     });
 });
 
 function fill_table_teams(data) {
+    var player_wins = {};
+    player_wins["bryan"] = 0;
+    player_wins["daniel"] = 0;
+    player_wins["gabri"] = 0;
+    player_wins["meg"] = 0;
+    player_wins["martin"] = 0;
+    player_wins["dorothy"] = 0;
+    player_wins["paula"] = 0;
+    player_wins["vic"] = 0;
     var table_data = {};
     data = data.split("\n");
     for (i = 1; i <= 32; ++i) {
@@ -56,12 +66,21 @@ function fill_table_teams(data) {
         }
         html += "<tr>";
         html += "<td id=\"" + cl + "\" class=\"" + cl + "\">" + team + "</td>";
+        var col = 0;
         for (var i of table_data[team]) {
+            ++col;
+            if (col == 3) {
+                player_wins[cl] += Number(i);
+            }
             html += "<td>" + i + "</td>";
         }
         html += "</tr>";
     }
     $("#table_teams > tbody:last-child").append(html);
+
+    for (var i in player_wins) {
+        $("#" + i + "_total").html(player_wins[i]);
+    }
 }
 
 function fill_table_players(data) {
