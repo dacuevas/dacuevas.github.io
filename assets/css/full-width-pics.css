@@ -18,7 +18,7 @@ body {
 
 .image-bg-fluid-height {
 	background: url('../imgs/main.png') repeat center center scroll;
-    background-size: 2000px auto;
+    background-size: 150% auto;
     padding-top: 100px;
 }
 
